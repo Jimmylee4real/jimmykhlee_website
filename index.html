@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jimmy K H Lee - Personal Webpage</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root {
+      --main-color: #232323;
+      --accent-color: #000;
+      --slate-blue: #5C6BC0;
+      --slate-blue-dark: #3F4CA0;
+      --font1: 'Segoe UI', Arial, sans-serif;
+      --font2: 'Roboto Slab', Georgia, serif;
+      --content-bg: #fff;
+      --section-gap: 3.2rem;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: var(--font1);
+      background: #f7f9fb;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      flex-wrap: wrap;
+    }
+    .navbar .logo {
+      font-family: var(--font2);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: var(--slate-blue);
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      border: 1.5px solid transparent;
+    }
+    .nav-links a:hover, .nav-links a:focus {
+      background: var(--slate-blue);
+      color: #fff;
+      border-color: var(--slate-blue-dark);
+      outline: none;
+    }
+    .nav-links a.special {
+      background: var(--slate-blue);
+      color: #fff !important;
+      border: 1.5px solid var(--slate-blue);
+      margin-left: 0.5rem;
+    }
+    .nav-links a.special:hover, .nav-links a.special:focus {
+      background: var(--slate-blue-dark);
+      border-color: var(--slate-blue-dark);
+    }
+    .main-content {
+      max-width: 900px;
+      margin: 2.5rem auto 2rem auto;
+      background: var(--content-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      margin-bottom: var(--section-gap);
+    }
+    .bio-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .profile-photo {
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 8px;
+      border: 2px solid #e0e0e0;
+      object-fit: cover;
+      background: #ddd;
+      box-shadow: 0 2px 10px rgba(80,80,80,0.09);
+    }
+    .bio-text {
+      flex: 1;
+    }
+    h1 {
+      font-family: var(--font2);
+      color: var(--accent-color);
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    h2, h3 {
+      font-family: var(--font2);
+      color: var(--accent-color);
+      margin-bottom: 1.1rem;
+      margin-top: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h2:first-child, h3:first-child {
+      margin-top: 0;
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 1.3rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.65;
+      color: var(--main-color);
+      font-size: 1.06rem;
+    }
+    p {
+      color: var(--main-color);
+      font-size: 1.06rem;
+      margin-top: 0;
+      margin-bottom: 1.3rem;
+      line-height: 1.65;
+    }
+    /* Highlight hyperlink text in Slate Blue except for buttons/nav */
+    .main-content a:not(.btn-primary):not(.special),
+    .cv-section a:not(.btn-primary):not(.special),
+    .contact-list a:not(.btn-primary):not(.special) {
+      color: var(--slate-blue);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .main-content a:not(.btn-primary):not(.special):hover,
+    .cv-section a:not(.btn-primary):not(.special):hover,
+    .contact-list a:not(.btn-primary):not(.special):hover {
+      color: var(--slate-blue-dark);
+      text-decoration: underline;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--slate-blue);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: var(--slate-blue-dark);
+      outline: none;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+    }
+    .contact-list li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      .navbar, .main-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+      }
+      .nav-links {
+        width: 100%;
+        gap: 0.7rem;
+        justify-content: flex-start;
+      }
+      .main-content { padding: 1rem; margin: 1rem; }
+      .bio-row { flex-direction: column; align-items: center; gap: 1.2rem; }
+      .profile-photo { width: 110px; height: 110px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+  <script>
+    // Smooth scroll for anchors
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if(href.startsWith('#')) {
+            const section = document.querySelector(href);
+            if(section) {
+              e.preventDefault();
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.pushState(null, null, href);
+            }
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">JIMMY LEE (李劍雄)</a>
+      <div class="nav-links">
+        <a href="#biography">Biography</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/Jimmylee4real" target="_blank" rel="noopener" class="special">GitHub</a>
+      </div>
+    </nav>
+  </header>
+  <div class="main-content">
+    <section id="biography">
+      <div class="bio-row">
+        <img src="images/Jimmy Lee.jpeg" alt="Jimmy Lee profile photo" class="profile-photo">
+        <div class="bio-text">
+          <p>
+            A self-driven finance and technology professional with over 4 years of full-time experience in banking and financial services, specializing in FinTech project delivery, Big Data Analytics, Business Process Automation, and Project Management.
+          </p>
+          <p>
+            He was awarded the UGC Fellowship by the University Grants Committee and over HK$230,000 in scholarships from the Hong Kong Government, universities, and the private sector to support his studies.
+          </p>
+          <p>
+            He completed his high school at an international school accredited by WASC, completed a few Advanced Placement (AP) courses.
+          </p>
+          <p>
+            Outside of work, he is an enthusiastic runner who regularly participates in races. He successfully completed his first 100km Oxfam Trailwalker in 2023 and his first full 42km marathon in 2024.
+          </p>
+          <p>
+            For more information, see <a href="Your-CV.pdf" target="_blank" rel="noopener">his CV</a> or connect on <a href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener">LinkedIn</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="cv-section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Dual Degree in Technology & Business, Computer Science (Incomplete)</strong>, The Hong Kong University of Science and Technology</li>
+        <li><strong>M.S. in Finance (FinTech and Financial Analytics), with Merit</strong>, Hong Kong Baptist University</li>
+      </ul>
+
+      <h3>Certifications & Professional Memberships</h3>
+      <ul>
+        <li>Project Management Professional (PMP)®</li>
+        <li>Associate Financial Technologist (AFT)</li>
+        <li>Open Water Diver (PADI)</li>
+        <li>Alteryx Designer Core Certification</li>
+        <li>Qlik Sense Developer</li>
+        <li>CFA Level I</li>
+        <li>SCA Introduction to Coffee</li>
+        <li>Vice President Public Relations (Toastmasters)</li>
+        <li>Member, Hong Kong Computer Society (HKCS)</li>
+      </ul>
+
+      <h3>Honours and Awards</h3>
+      <ul>
+        <li>UGC Fellowship - University Grants Committee</li>
+        <li>HKSAR Outstanding Performance Scholarship</li>
+        <li>First Class Honours (Undergraduate)</li>
+        <li>Entrance Scholarship</li>
+        <li>Hin Sang Scholarship</li>
+        <li>Academic Accomplishment Scholarship</li>
+        <li>Dean’s List for multiple semesters</li>
+      </ul>
+      <a class="btn-primary" href="Your-CV.pdf" target="_blank" rel="noopener">Download PDF</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:kimhungjimmylee@gmail.com">kimhungjimmylee@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Jimmylee4real" target="_blank" rel="noopener">github.com/Jimmylee4real</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener">linkedin.com/in/kimhungjimmylee</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
