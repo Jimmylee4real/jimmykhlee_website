@@ -2,303 +2,314 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jimmy K H Lee - Personal Webpage</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jimmy K H Lee - finance, technology, and thoughtful reading notes.">
+  <title>Welcome to Jimmy's page</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23172b42'/%3E%3Cpath d='M18 23h28l4 8-4 17H18l-4-17 4-8Z' fill='%230d5266' stroke='%23a6e5f3' stroke-width='2'/%3E%3Cpath d='M22 30h20' stroke='%23a6e5f3' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='31' r='3' fill='%23fff'/%3E%3Ccircle cx='40' cy='31' r='3' fill='%23fff'/%3E%3Cpath d='M23 40c3 3 6 4 9 4s6-1 9-4' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M32 12v8M28 16h8' stroke='%23a6e5f3' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main-color: #232323;
-      --accent-color: #000;
-      --slate-blue: #5C6BC0;
-      --slate-blue-dark: #3F4CA0;
-      --font1: 'Segoe UI', Arial, sans-serif;
-      --font2: 'Roboto Slab', Georgia, serif;
-      --content-bg: #fff;
-      --section-gap: 3.2rem;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      font-family: var(--font1);
-      background: #f7f9fb;
-    }
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .navbar {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem;
-      flex-wrap: wrap;
-    }
-    .navbar .logo {
-      font-family: var(--font2);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-    .nav-links a {
-      color: var(--slate-blue);
-      font-weight: 500;
-      text-decoration: none;
-      padding: 0.5rem 0.8rem;
-      border-radius: 4px;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-      border: 1.5px solid transparent;
-    }
-    .nav-links a:hover, .nav-links a:focus {
-      background: var(--slate-blue);
-      color: #fff;
-      border-color: var(--slate-blue-dark);
-      outline: none;
-    }
-    .nav-links a.special {
-      background: var(--slate-blue);
-      color: #fff !important;
-      border: 1.5px solid var(--slate-blue);
-      margin-left: 0.5rem;
-    }
-    .nav-links a.special:hover, .nav-links a.special:focus {
-      background: var(--slate-blue-dark);
-      border-color: var(--slate-blue-dark);
-    }
-    .main-content {
-      max-width: 900px;
-      margin: 2.5rem auto 2rem auto;
-      background: var(--content-bg);
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    section {
-      margin-bottom: var(--section-gap);
-    }
-    .bio-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-    .profile-photo {
-      flex-shrink: 0;
-      width: 140px;
-      height: 140px;
-      border-radius: 8px;
-      border: 2px solid #e0e0e0;
-      object-fit: cover;
-      background: #ddd;
-      box-shadow: 0 2px 10px rgba(80,80,80,0.09);
-    }
-    .bio-text {
-      flex: 1;
-    }
-    h1 {
-      font-family: var(--font2);
-      color: var(--accent-color);
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    h2, h3 {
-      font-family: var(--font2);
-      color: var(--accent-color);
-      margin-bottom: 1.1rem;
-      margin-top: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    h2:first-child, h3:first-child {
-      margin-top: 0;
-    }
-    ul {
-      margin-top: 0;
-      margin-bottom: 1.3rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-      line-height: 1.65;
-      color: var(--main-color);
-      font-size: 1.06rem;
-    }
-    p {
-      color: var(--main-color);
-      font-size: 1.06rem;
-      margin-top: 0;
-      margin-bottom: 1.3rem;
-      line-height: 1.65;
-    }
-    /* Highlight hyperlink text in Slate Blue except for buttons/nav */
-    .main-content a:not(.btn-primary):not(.special),
-    .cv-section a:not(.btn-primary):not(.special),
-    .contact-list a:not(.btn-primary):not(.special) {
-      color: var(--slate-blue);
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-    .main-content a:not(.btn-primary):not(.special):hover,
-    .cv-section a:not(.btn-primary):not(.special):hover,
-    .contact-list a:not(.btn-primary):not(.special):hover {
-      color: var(--slate-blue-dark);
-      text-decoration: underline;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--slate-blue);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover, .btn-primary:focus {
-      background: var(--slate-blue-dark);
-      outline: none;
-    }
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.5rem 0 0 0;
-    }
-    .contact-list li {
-      margin-bottom: 0.4rem;
-      font-size: 1rem;
-    }
-    @media (max-width: 700px) {
-      .navbar, .main-content {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.7rem;
-      }
-      .nav-links {
-        width: 100%;
-        gap: 0.7rem;
-        justify-content: flex-start;
-      }
-      .main-content { padding: 1rem; margin: 1rem; }
-      .bio-row { flex-direction: column; align-items: center; gap: 1.2rem; }
-      .profile-photo { width: 110px; height: 110px; }
-      h1 { font-size: 1.5rem; }
+    :root { --ink: #172b42; --muted: #536579; --paper: #fbfcfd; --canvas: #f1f5f8; --line: #d6e0e8; --pine: #0d5266; --lime: #dceaf0; --sun: #e6edf3; --mono: "DM Mono", monospace; --display: "Fraunces", Georgia, serif; --body: "Manrope", sans-serif; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; color: var(--ink); background: var(--paper); font-family: var(--body); line-height: 1.6; }
+    a { color: inherit; }
+    .site-header { position: sticky; top: 0; z-index: 10; background: rgba(251, 252, 253, 0.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+    .nav { width: min(1180px, calc(100% - 48px)); min-height: 96px; margin: 0 auto; display: flex; align-items: center; justify-content: flex-start; gap: 24px; }
+    .nav-links { display: flex; width: 100%; align-items: center; gap: 22px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { position: relative; color: var(--muted); font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.04em; text-decoration: none; transition: color 160ms ease, transform 160ms ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--pine); }
+    .nav-links a:not(.external):hover, .nav-links a:not(.external):focus-visible { color: var(--ink); font-weight: 500; transform: scale(1.08); }
+    .nav-links a:not(.external):hover::after, .nav-links a:not(.external):focus-visible::after { position: absolute; right: 0; bottom: -9px; left: 0; height: 2px; background: var(--pine); content: ""; }
+    .nav-links a.is-active { color: var(--ink); font-weight: 500; transform: scale(1.08); }
+    .nav-links a.is-active::after { position: absolute; right: 0; bottom: -9px; left: 0; height: 2px; background: var(--pine); content: ""; }
+    .nav-links .external { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; color: var(--ink); border: 1px solid var(--ink); transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+    .nav-links .external:hover, .nav-links .external:focus-visible { color: var(--paper); background: var(--ink); transform: scale(1.06); }
+    .nav-icon { width: 16px; height: 16px; stroke-width: 1.8; }
+    .social-logo { display: block; width: 19px; height: 19px; }
+    .nav-links .external:hover .social-logo, .nav-links .external:focus-visible .social-logo { filter: invert(1); }
+    .social-start { margin-left: auto; }
+    .menu-toggle { display: none; width: 40px; height: 40px; padding: 0; color: var(--ink); background: transparent; border: 1px solid var(--line); font-size: 1.2rem; cursor: pointer; }
+    .shell { overflow: hidden; }
+    .hero { position: relative; min-height: 590px; padding: 104px 0 82px; overflow: hidden; background-color: var(--canvas); background-image: linear-gradient(rgba(13, 82, 102, 0.075) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 82, 102, 0.075) 1px, transparent 1px); background-size: 56px 56px; border-bottom: 1px solid var(--line); }
+    .hero::before { position: absolute; top: 0; right: max(4vw, 32px); bottom: 0; width: 1px; background: rgba(13, 82, 102, 0.24); box-shadow: -280px 0 0 rgba(13, 82, 102, 0.08); content: ""; }
+    .hero::after { position: absolute; right: max(4vw, 32px); bottom: 46px; width: 128px; height: 72px; border-top: 1px solid rgba(13, 82, 102, 0.34); border-right: 1px solid rgba(13, 82, 102, 0.34); content: ""; }
+    .hero-orbit { position: absolute; top: 52%; left: -280px; width: 600px; aspect-ratio: 1; border: 1px solid rgba(13, 82, 102, 0.26); border-radius: 50%; background: rgba(220, 234, 240, 0.34); transform: translateY(-50%); pointer-events: none; }
+    .hero-orbit::before { position: absolute; top: 49%; left: 50%; width: 760px; height: 246px; border: 1px solid rgba(13, 82, 102, 0.2); border-radius: 50%; content: ""; transform: translate(-50%, -50%) rotate(-19deg); }
+    .hero-orbit::after { position: absolute; top: 28%; right: 6%; width: 10px; aspect-ratio: 1; background: var(--pine); border: 3px solid var(--canvas); border-radius: 50%; box-shadow: 0 0 0 1px rgba(13, 82, 102, 0.36); content: ""; }
+    .hero-inner, .section-inner, .footer-inner { position: relative; width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+    .hero-inner { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr); align-items: center; gap: 88px; }
+    .eyebrow, .section-label, .review-meta { margin: 0 0 16px; color: var(--pine); font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin-bottom: 28px; font-family: var(--display); font-size: clamp(3.25rem, 6vw, 5.8rem); font-weight: 600; letter-spacing: 0; line-height: 1; }
+    h1 em { color: #c54432; font-style: italic; }
+    .hero-copy { max-width: 560px; margin-bottom: 32px; color: #3f4c46; font-size: 1.08rem; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 45px; padding: 0 18px; background: var(--pine); color: white; border: 1px solid var(--pine); font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em; text-decoration: none; transition: transform 160ms ease, background 160ms ease; }
+    .button:hover, .button:focus-visible { background: #163d33; transform: translateY(-2px); }
+    .button.secondary { background: transparent; color: var(--ink); }
+    .button.secondary:hover, .button.secondary:focus-visible { background: var(--paper); }
+    .hero-aside { overflow: hidden; border: 1px solid var(--line); background: #fff; box-shadow: 0 14px 36px rgba(23, 43, 66, 0.08); }
+    .portrait-wrap { position: relative; width: min(250px, calc(100% - 52px)); margin: 30px auto 0; padding: 5px; overflow: hidden; background: #fff; border: 2px solid var(--ink); border-radius: 50%; cursor: crosshair; transition: border-color 280ms ease, box-shadow 280ms ease; }
+    .portrait { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center; border-radius: 50%; filter: saturate(0.78) contrast(1.02); transition: filter 280ms ease, transform 280ms ease, opacity 280ms ease; }
+    .portrait-hover { position: absolute; inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); opacity: 0; }
+    .digital-twin { position: absolute; inset: 5px; overflow: hidden; border: 1px solid rgba(166, 229, 243, 0.82); border-radius: 50%; opacity: 0; pointer-events: none; transition: opacity 280ms ease; }
+    .digital-twin::before { position: absolute; top: 50%; left: 50%; width: 88%; aspect-ratio: 1; border: 1px solid rgba(166, 229, 243, 0.82); border-radius: 50%; content: ""; transform: translate(-50%, -50%) rotate(-21deg) scaleY(0.55); }
+    .digital-twin::after { position: absolute; top: -12%; right: 12%; left: 12%; height: 1px; background: #a6e5f3; box-shadow: 0 0 0 1px rgba(13, 82, 102, 0.3); content: ""; }
+    .twin-points { position: absolute; top: 45%; left: 50%; width: 4px; height: 4px; background: #a6e5f3; border-radius: 50%; box-shadow: -38px -27px 0 #a6e5f3, 38px -27px 0 #a6e5f3, -25px 1px 0 #a6e5f3, 25px 1px 0 #a6e5f3, 0 8px 0 #a6e5f3, -17px 33px 0 #a6e5f3, 17px 33px 0 #a6e5f3; transform: translate(-50%, -50%); }
+    .twin-axis { position: absolute; top: 20%; bottom: 20%; left: 50%; width: 1px; background: rgba(166, 229, 243, 0.64); }
+    .twin-label { position: absolute; right: 14%; bottom: 15%; padding: 3px 5px; color: var(--ink); background: #a6e5f3; font-family: var(--mono); font-size: 0.47rem; font-weight: 500; letter-spacing: 0.06em; line-height: 1; white-space: nowrap; }
+    .portrait-wrap:hover, .portrait-wrap:focus { border-color: var(--pine); box-shadow: 0 0 0 4px rgba(166, 229, 243, 0.42); outline: none; }
+    .portrait-wrap:hover .portrait, .portrait-wrap:focus .portrait { filter: saturate(0.5) contrast(1.12) brightness(0.9); transform: scale(1.035); }
+    .portrait-wrap:hover .portrait:not(.portrait-hover), .portrait-wrap:focus .portrait:not(.portrait-hover) { opacity: 0; }
+    .portrait-wrap:hover .portrait-hover, .portrait-wrap:focus .portrait-hover { opacity: 1; }
+    .portrait-wrap:hover .digital-twin, .portrait-wrap:focus .digital-twin { opacity: 1; }
+    .portrait-wrap:hover .digital-twin::after, .portrait-wrap:focus .digital-twin::after { animation: portrait-scan 900ms ease-out both; }
+    @keyframes portrait-scan { from { transform: translateY(0); } to { transform: translateY(305px); } }
+    @media (prefers-reduced-motion: reduce) { .portrait-wrap, .portrait, .digital-twin { transition: none; } .portrait-wrap:hover .digital-twin::after, .portrait-wrap:focus .digital-twin::after { animation: none; } }
+    .portrait-caption { display: none; }
+    .advisory-panel { padding: 24px 26px 28px; }
+    .aside-label { margin: 0 0 16px; color: var(--pine); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .aside-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .aside-list li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 0.82rem; line-height: 1.45; }
+    .aside-list span { color: var(--muted); font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .facts { width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .fact { min-height: 116px; padding: 23px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+    .fact strong { display: block; margin-bottom: 4px; font-family: var(--display); font-size: 1.45rem; line-height: 1.1; }
+    .fact strong .fact-amp { display: inline-block; margin: 0 0.14em; font-family: var(--body); font-size: 0.84em; font-weight: 700; vertical-align: 0.06em; }
+    .fact span { color: var(--muted); font-family: var(--mono); font-size: 0.67rem; text-transform: uppercase; }
+    .language-list { display: grid; grid-template-columns: repeat(2, max-content); gap: 4px 12px; padding-top: 3px; }
+    .language-list span { color: var(--muted); font-family: var(--mono); font-size: 0.61rem; letter-spacing: 0.01em; text-transform: none; white-space: nowrap; }
+    .section { padding: 112px 0; }
+    .section + .section { border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 28px; margin-bottom: 54px; }
+    h2 { max-width: 800px; margin-bottom: 0; font-family: var(--display); font-size: clamp(2.3rem, 5vw, 4.5rem); font-weight: 600; letter-spacing: 0; line-height: 1; }
+    .section-intro { max-width: 640px; margin: 20px 0 0; color: var(--muted); font-size: 1rem; }
+    .about-grid { display: block; }
+    .about-copy { max-width: 1040px; font-family: var(--display); font-size: clamp(1.12rem, 1.45vw, 1.35rem); line-height: 1.58; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .details { border-top: 1px solid var(--ink); }
+    .detail { padding: 18px 0; border-bottom: 1px solid var(--ink); }
+    .detail dt { margin-bottom: 6px; color: var(--pine); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; }
+    .detail dd { margin: 0; font-size: 0.93rem; }
+    .credentials { background: #f5f8fa; color: var(--ink); }
+    .skills-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .skill { display: flex; min-height: 164px; flex-direction: column; justify-content: space-between; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; transition: background 180ms ease, transform 180ms ease; }
+    .skill:hover { background: #f8fcfd; transform: translateY(-2px); }
+    .skill-logo, .skill-monogram { display: grid; width: 38px; height: 38px; place-items: center; color: var(--pine); border: 1px solid #a6d2df; }
+    .skill-logos { display: flex; gap: 6px; }
+    .skill-logo { padding: 8px; }
+    .skill-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .skill-monogram { font-family: var(--mono); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.02em; }
+    .skill h3 { margin: 20px 0 5px; font-family: var(--display); font-size: 1.25rem; font-weight: 600; line-height: 1.05; }
+    .skill p { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 0.61rem; letter-spacing: 0.02em; line-height: 1.45; text-transform: uppercase; }
+    .reviews { background: var(--paper); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .review { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border: 1px solid var(--ink); transition: transform 180ms ease, box-shadow 180ms ease; }
+    .review:hover { box-shadow: 0 12px 28px rgba(23, 43, 66, 0.12); transform: translateY(-3px); }
+    .cover { width: 100%; aspect-ratio: 1 / 1.24; object-fit: cover; border-bottom: 1px solid var(--ink); background: var(--canvas); }
+    .cover-trailwalker { box-sizing: border-box; padding: 14px; object-fit: contain; }
+    .review-body { display: flex; flex-direction: column; padding: 22px; }
+    .review-meta { margin-bottom: 8px; color: var(--pine); font-size: 0.62rem; }
+    .review h3 { margin-bottom: 5px; font-family: var(--display); font-size: 1.55rem; font-weight: 600; line-height: 1.05; }
+    .review-author { margin-bottom: 18px; color: var(--muted); font-size: 0.84rem; }
+    .review p:last-child { margin: auto 0 0; font-size: 0.9rem; line-height: 1.55; }
+    .contact { padding-bottom: 72px; }
+    .contact-panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 40px; padding: clamp(32px, 6vw, 72px); background: var(--ink); color: #fff; border: 1px solid var(--ink); }
+    .contact-panel .section-label { color: #a6d2df; }
+    .contact-panel .button.secondary { color: #fff; border-color: #fff; }
+    .contact-panel .button.secondary:hover, .contact-panel .button.secondary:focus-visible { color: var(--ink); background: #fff; }
+    .contact-panel .contact-link { border-color: #a6d2df; }
+    .contact-panel .contact-link:hover, .contact-panel .contact-link:focus-visible { color: #a6d2df; }
+    .contact-panel h2 { max-width: 720px; font-size: clamp(2.6rem, 5vw, 5.2rem); }
+    .contact-panel h2 em { font-style: italic; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .contact-link { padding-bottom: 3px; border-bottom: 1px solid var(--ink); font-family: var(--mono); font-size: 0.73rem; text-decoration: none; }
+    .contact-link:hover, .contact-link:focus-visible { color: var(--pine); }
+    dialog { width: min(620px, calc(100% - 32px)); padding: 0; color: var(--ink); background: #fff; border: 1px solid var(--line); box-shadow: 0 24px 72px rgba(12, 31, 49, 0.28); }
+    dialog::backdrop { background: rgba(17, 34, 52, 0.6); backdrop-filter: blur(3px); }
+    .dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 30px 32px 20px; border-bottom: 1px solid var(--line); }
+    .dialog-header h2 { font-size: clamp(2rem, 5vw, 3rem); }
+    .dialog-close { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; color: var(--ink); background: transparent; border: 1px solid var(--line); cursor: pointer; }
+    .contact-form { display: grid; gap: 18px; padding: 30px 32px 34px; }
+    .form-field { display: grid; gap: 7px; }
+    .form-field label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .form-field input, .form-field textarea { width: 100%; padding: 12px 13px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 0; font: inherit; }
+    .form-field textarea { min-height: 150px; resize: vertical; }
+    .form-field input:focus, .form-field textarea:focus { outline: 2px solid #8fc2d1; outline-offset: 1px; }
+    .form-note { margin: -4px 0 0; color: var(--muted); font-size: 0.79rem; }
+    footer { padding: 26px 0; background: var(--ink); color: #dce5de; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.02em; }
+    @media (max-width: 1020px) { .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 760px) {
+      .nav, .hero-inner, .section-inner, .footer-inner { width: min(100% - 32px, 1180px); }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links { position: absolute; top: 68px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 12px 16px 18px; background: var(--paper); border-bottom: 1px solid var(--line); }
+      .nav-links.open { display: grid; }
+      .nav-links a { display: block; padding: 12px 0; }
+      .nav-links .external { width: 100%; height: auto; min-height: 40px; padding: 10px 12px; text-align: center; }
+      .social-start { margin-left: 0; }
+      .hero { min-height: auto; padding: 72px 0 52px; }
+      .hero-orbit { top: 20%; left: -215px; width: 430px; }
+      .hero-orbit::before { width: 540px; height: 174px; }
+      .hero-inner, .about-grid, .contact-panel { grid-template-columns: 1fr; gap: 36px; }
+      .hero-copy { font-size: 1rem; }
+      .hero-aside { max-width: 460px; }
+      .portrait-wrap { width: min(250px, calc(100% - 52px)); }
+      .facts, .skills-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .section { padding: 72px 0; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; margin-bottom: 38px; }
+      .section-label { margin-bottom: 0; }
+      .about-grid { gap: 42px; }
+      .fact { min-height: 100px; }
+      .skill { min-height: 132px; }
+      .footer-inner { flex-direction: column; }
     }
   </style>
-  <script>
-    // Smooth scroll for anchors
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if(href.startsWith('#')) {
-            const section = document.querySelector(href);
-            if(section) {
-              e.preventDefault();
-              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              history.pushState(null, null, href);
-            }
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="#" class="logo">JIMMY LEE (李劍雄)</a>
-      <div class="nav-links">
-        <a href="#biography">Biography</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/Jimmylee4real" target="_blank" rel="noopener" class="special">GitHub</a>
-      </div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">+</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#credentials">Skills</a></li>
+        <li><a href="#reading">Outside the office</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="social-start"><a class="external" href="https://github.com/Jimmylee4real" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><img class="social-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt=""></a></li>
+        <li><a class="external" href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn"><img class="social-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt=""></a></li>
+      </ul>
     </nav>
   </header>
-  <div class="main-content">
-    <section id="biography">
-      <div class="bio-row">
-        <img src="images/Jimmy Lee.jpeg" alt="Jimmy Lee profile photo" class="profile-photo">
-        <div class="bio-text">
-          <p>
-            A self-driven finance and technology professional with over 4 years of full-time experience in banking and financial services, specializing in FinTech project delivery, Big Data Analytics, Business Process Automation, and Project Management.
-          </p>
-          <p>
-            He was awarded the UGC Fellowship by the University Grants Committee and over HK$230,000 in scholarships from the Hong Kong Government, universities, and the private sector to support his studies.
-          </p>
-          <p>
-            He completed his high school at an international school accredited by WASC, completed a few Advanced Placement (AP) courses.
-          </p>
-          <p>
-            Outside of work, he is an enthusiastic runner who regularly participates in races. He successfully completed his first 100km Oxfam Trailwalker in 2023 and his first full 42km marathon in 2024.
-          </p>
-          <p>
-            For more information, see <a href="Your-CV.pdf" target="_blank" rel="noopener">his CV</a> or connect on <a href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener">LinkedIn</a>.
-          </p>
+  <main class="shell" id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Hello, my name is</p>
+          <h1 id="hero-title">Jimmy <em>Lee.</em></h1>
+          <p class="hero-copy">I am building this portfolio to share what I am learning, reach a wider audience, and keep track of my latest work before I get too comfortable. :D</p>
+          <div class="button-row"><a class="button" href="#about">Get to know me</a><a class="button secondary" href="#contact">Let's connect</a></div>
+        </div>
+        <aside class="hero-aside" aria-label="Professional summary">
+          <div class="portrait-wrap" tabindex="0" aria-label="Portrait of Jimmy Lee. Hover or focus to view the digital twin treatment."><img class="portrait" src="images/Jimmy%20Lee.jpeg" alt="Portrait of Jimmy Lee"><img class="portrait portrait-hover" src="images/digital-twin-portrait.jpeg" alt="" aria-hidden="true"><div class="digital-twin" aria-hidden="true"><span class="twin-axis"></span><span class="twin-points"></span><span class="twin-label">AI / DIGITAL TWIN</span></div></div>
+          <div class="advisory-panel">
+            <p class="aside-label">At a glance</p>
+            <ul class="aside-list">
+              <li><span>Focus</span>AI &amp; FinTech project delivery, data &amp; digital transformation</li>
+              <li><span>Experience</span>6+ years across financial services and the public sector</li>
+              <li><span>Current workplace</span>Cyberport, Hong Kong</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="facts" aria-label="Highlights">
+      <div class="fact"><strong>6+ years</strong><span>Financial services &amp; public sector</span></div>
+      <div class="fact"><strong>AI<span class="fact-amp">&amp;</span>FinTech</strong><span>Project delivery, data &amp; automation</span></div>
+      <div class="fact"><strong>Languages</strong><div class="language-list"><span aria-label="Cantonese, Hong Kong">🇭🇰 Cantonese</span><span aria-label="Mandarin, China">🇨🇳 Mandarin</span><span aria-label="English, United Kingdom">🇬🇧 English</span><span aria-label="Thai, Thailand">🇹🇭 Thai</span></div></div>
+    </section>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-inner">
+        <div class="section-head"><p class="section-label">01 / Profile</p><div><h2 id="about-title">A little more about me.</h2></div></div>
+        <div class="about-grid">
+          <div class="about-copy"><p>I am a finance and technology professional focused on AI and FinTech project delivery, data analytics, business-process automation, and project management.</p><p>I was awarded the UGC Fellowship and received more than HK$230,000 in scholarships from the Hong Kong Government, universities, and the private sector.</p><p>Outside work, I build discipline through endurance sport and a regular gym routine. Milestones include my first 100 km Oxfam Trailwalker in 2023, full marathon in 2024, and HYROX Doubles race in 2026. I am still early in my strength-training journey and enjoy the steady progress.</p><p>I have also returned to the guitar, a skill I first picked up in my freshman year of high school, and am learning pop songs by Bruno Mars, Taylor Swift, and others.</p></div>
         </div>
       </div>
     </section>
-
-    <section id="cv" class="cv-section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Dual Degree in Technology & Business, Computer Science (Incomplete)</strong>, The Hong Kong University of Science and Technology</li>
-        <li><strong>M.S. in Finance (FinTech and Financial Analytics), with Merit</strong>, Hong Kong Baptist University</li>
-      </ul>
-
-      <h3>Certifications & Professional Memberships</h3>
-      <ul>
-        <li>Project Management Professional (PMP)®</li>
-        <li>Associate Financial Technologist (AFT)</li>
-        <li>Open Water Diver (PADI)</li>
-        <li>Alteryx Designer Core Certification</li>
-        <li>Qlik Sense Developer</li>
-        <li>CFA Level I</li>
-        <li>SCA Introduction to Coffee</li>
-        <li>Vice President Public Relations (Toastmasters)</li>
-        <li>Member, Hong Kong Computer Society (HKCS)</li>
-      </ul>
-
-      <h3>Honours and Awards</h3>
-      <ul>
-        <li>UGC Fellowship - University Grants Committee</li>
-        <li>HKSAR Outstanding Performance Scholarship</li>
-        <li>First Class Honours (Undergraduate)</li>
-        <li>Entrance Scholarship</li>
-        <li>Hin Sang Scholarship</li>
-        <li>Academic Accomplishment Scholarship</li>
-        <li>Dean’s List for multiple semesters</li>
-      </ul>
-      <a class="btn-primary" href="Your-CV.pdf" target="_blank" rel="noopener">Download PDF</a>
+    <section class="section credentials" id="credentials" aria-labelledby="credentials-title">
+      <div class="section-inner">
+        <div class="section-head"><p class="section-label">02 / Skills</p><div><h2 id="credentials-title">Technical capabilities.</h2><p class="section-intro">A practical mix of development, data, automation, and business-intelligence tools.</p></div></div>
+        <div class="skills-grid" aria-label="Technical skills">
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/html5.svg" alt=""></span><h3>HTML</h3><p>Semantic structure</p></article>
+          <article class="skill"><span class="skill-monogram">CSS</span><h3>CSS</h3><p>Responsive interfaces</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/javascript.svg" alt=""></span><h3>JavaScript</h3><p>Web interaction</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/python.svg" alt=""></span><h3>Python</h3><p>Analysis &amp; automation</p></article>
+          <article class="skill"><span class="skill-monogram">SQL</span><h3>SQL</h3><p>Data querying</p></article>
+          <article class="skill"><span class="skill-logos"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/evernote.svg" alt=""></span><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/notion.svg" alt=""></span></span><h3>Evernote / Notion</h3><p>A place where I keep my knowledge.</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/qlik.svg" alt=""></span><h3>Qlik</h3><p>Business intelligence</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tableau.svg" alt=""></span><h3>Tableau</h3><p>Data storytelling</p></article>
+          <article class="skill"><span class="skill-monogram">VBA</span><h3>VBA</h3><p>Workflow automation</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/alteryx.svg" alt=""></span><h3>Alteryx</h3><p>Data preparation</p></article>
+          <article class="skill"><span class="skill-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/neo4j.svg" alt=""></span><h3>Neo4j</h3><p>Graph databases</p></article>
+        </div>
+      </div>
     </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:kimhungjimmylee@gmail.com">kimhungjimmylee@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/Jimmylee4real" target="_blank" rel="noopener">github.com/Jimmylee4real</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener">linkedin.com/in/kimhungjimmylee</a></li>
-      </ul>
+    <section class="section reviews" id="reading" aria-labelledby="reading-title">
+      <div class="section-inner">
+        <div class="section-head"><p class="section-label">03 / Outside the office</p><div><h2 id="reading-title">Curiosity, endurance, and the things that keep me moving.</h2><p class="section-intro">A few reading reflections and personal challenges that shape how I approach sustained effort, learning, and teamwork.</p></div></div>
+        <div class="reviews-grid">
+          <article class="review"><img class="cover" src="images/marketing-4-0.jpg" alt="Personal copy of Marketing 4.0 with notes" loading="lazy"><div class="review-body"><h3>Marketing 4.0</h3><p class="review-author">Philip Kotler, Hermawan Kartajaya &amp; Iwan Setiawan</p><p>A thoughtful look at how marketing moves from traditional channels to a connected digital experience, with customer trust at its centre.</p></div></article>
+          <article class="review"><img class="cover" src="images/random-walk-down-wall-street.jpg" alt="Personal copy of A Random Walk Down Wall Street beside coffee" loading="lazy"><div class="review-body"><h3>A Random Walk Down Wall Street</h3><p class="review-author">Burton G. Malkiel</p><p>A grounded guide to long-term investing that makes a strong case for diversification, discipline, and resisting short-term market noise.</p></div></article>
+          <article class="review"><img class="cover cover-trailwalker" src="images/oxfam-trailwalker.jpg" alt="Oxfam Trailwalker medal and event materials" loading="lazy"><div class="review-body"><h3>Oxfam Trailwalker</h3><p class="review-author">100 km team challenge</p><p>Completing my first 100 km Trailwalker reinforced the value of steady pacing, shared responsibility, and showing up for the team when conditions become difficult.</p></div></article>
+          <article class="review"><img class="cover" src="images/hyrox.jpg" alt="Jimmy competing in a HYROX sled pull" loading="lazy"><div class="review-body"><h3>HYROX</h3><p class="review-author">A test of strength and stamina</p><p>A focused experience in balancing power, endurance, and recovery. It is a useful reminder that consistency matters as much as intensity.</p></div></article>
+        </div>
+      </div>
     </section>
-  </div>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-inner"><div class="contact-panel"><div><p class="section-label">04 / Contact</p><h2 id="contact-title">Have something to share, or simply want to chat? <em>Let's talk.</em></h2><div class="contact-links"><a class="contact-link" href="mailto:kimhungjimmylee@gmail.com">Email</a><a class="contact-link" href="https://linkedin.com/in/kimhungjimmylee" target="_blank" rel="noopener">LinkedIn ↗</a><a class="contact-link" href="https://github.com/Jimmylee4real" target="_blank" rel="noopener">GitHub ↗</a><a class="contact-link" href="Your-CV.pdf" target="_blank" rel="noopener">Download CV ↗</a></div></div><button class="button secondary" id="open-contact-form" type="button">Start a conversation</button></div></div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><span>Thanks for visiting.</span><span>&copy; <span id="current-year"></span> Jimmy K H Lee. All rights reserved.</span></div></footer>
+  <dialog id="contact-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header">
+      <div><p class="section-label">Contact</p><h2 id="dialog-title">Start a conversation.</h2></div>
+      <button class="dialog-close" id="close-contact-form" type="button" aria-label="Close contact form"><i data-lucide="x" class="nav-icon"></i></button>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <div class="form-field"><label for="contact-name">Name</label><input id="contact-name" name="name" autocomplete="name" required></div>
+      <div class="form-field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="form-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" required></textarea></div>
+      <p class="form-note">Submitting opens your email application with this message addressed to Jimmy.</p>
+      <button class="button" type="submit">Prepare email</button>
+    </form>
+  </dialog>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const contactDialog = document.querySelector('#contact-dialog');
+    const contactForm = document.querySelector('#contact-form');
+    menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', isOpen); menuToggle.textContent = isOpen ? '−' : '+'; });
+    const sectionLinks = Array.from(navLinks.querySelectorAll('a[href^="#"]'));
+    const setActiveSectionLink = (activeLink) => {
+      sectionLinks.forEach((link) => {
+        const isActive = link === activeLink;
+        link.classList.toggle('is-active', isActive);
+        link.toggleAttribute('aria-current', isActive);
+      });
+    };
+    const updateActiveSectionLink = () => {
+      const headerOffset = document.querySelector('.site-header').offsetHeight + 28;
+      let activeLink = sectionLinks[0];
+      sectionLinks.slice(1).forEach((link) => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section && section.getBoundingClientRect().top <= headerOffset) activeLink = link;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) activeLink = sectionLinks.at(-1);
+      setActiveSectionLink(activeLink);
+    };
+    setActiveSectionLink(sectionLinks[0]);
+    navLinks.querySelectorAll('a').forEach((link) => { link.addEventListener('click', () => { if (sectionLinks.includes(link)) setActiveSectionLink(link); navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.textContent = '+'; }); });
+    window.addEventListener('scroll', updateActiveSectionLink, { passive: true });
+    updateActiveSectionLink();
+    document.querySelector('#open-contact-form').addEventListener('click', () => contactDialog.showModal());
+    document.querySelector('#close-contact-form').addEventListener('click', () => contactDialog.close());
+    contactDialog.addEventListener('click', (event) => { if (event.target === contactDialog) contactDialog.close(); });
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(contactForm);
+      const subject = `Website enquiry from ${formData.get('name')}`;
+      const body = `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMessage:\n${formData.get('message')}`;
+      window.location.href = `mailto:kimhungjimmylee@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      contactDialog.close();
+    });
+    document.querySelector('#current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
